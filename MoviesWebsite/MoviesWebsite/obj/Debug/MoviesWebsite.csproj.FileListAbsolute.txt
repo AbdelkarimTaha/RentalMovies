@@ -217,3 +217,6 @@ C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\obj\De
 C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\obj\Debug\MoviesWebsite.Migrations.AddNameToMembershipClass.resources
 C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\obj\Debug\MoviesWebsite.Migrations.PopulateNameinMembershipTypeClass.resources
 C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\obj\Debug\MoviesWebsite.Migrations.AddBirthdateToCustomerClass.resources
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\obj\Debug\MoviesWebsite.Migrations.BeforeGenre.resources
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\obj\Debug\MoviesWebsite.Migrations.AddGenreClassAndModifyMovieClass.resources
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\obj\Debug\MoviesWebsite.Migrations.PopulateGenreTble.resources
