@@ -195,6 +195,18 @@
     <Compile Include="Migrations\202002250804419_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>202002250804419_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002250856541_AddNameToMembershipClass.cs" />
+    <Compile Include="Migrations\202002250856541_AddNameToMembershipClass.Designer.cs">
+      <DependentUpon>202002250856541_AddNameToMembershipClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002250859275_PopulateNameinMembershipTypeClass.cs" />
+    <Compile Include="Migrations\202002250859275_PopulateNameinMembershipTypeClass.Designer.cs">
+      <DependentUpon>202002250859275_PopulateNameinMembershipTypeClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002250921438_AddBirthdateToCustomerClass.cs" />
+    <Compile Include="Migrations\202002250921438_AddBirthdateToCustomerClass.Designer.cs">
+      <DependentUpon>202002250921438_AddBirthdateToCustomerClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -296,6 +308,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002250804419_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>202002250804419_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002250856541_AddNameToMembershipClass.resx">
+      <DependentUpon>202002250856541_AddNameToMembershipClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002250859275_PopulateNameinMembershipTypeClass.resx">
+      <DependentUpon>202002250859275_PopulateNameinMembershipTypeClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002250921438_AddBirthdateToCustomerClass.resx">
+      <DependentUpon>202002250921438_AddBirthdateToCustomerClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
