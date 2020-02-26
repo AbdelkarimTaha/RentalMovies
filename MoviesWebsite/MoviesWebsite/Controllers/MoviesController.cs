@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using MoviesWebsite.ViewModels;
 
 namespace MoviesWebsite.Controllers
 {
@@ -33,5 +34,53 @@ namespace MoviesWebsite.Controllers
 
             return View(movie);
         }
+        public ActionResult MovieForm()
+        {
+            var genres = _context.Genres.ToList();
+
+            var viewModel = new MovieFormViewModel
+            {
+                Title = "New Custumer",
+                Genres = genres
+            };
+
+            return View(viewModel);
+        }
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+            movie.DateAdded = DateTime.Now;
+
+            if (movie.Id==0)
+                _context.Movies.Add(movie);
+            else
+            {
+                Movie MovieInDb = _context.Movies.Single(m => m.Id == movie.Id);
+                MovieInDb.Name = movie.Name;
+                MovieInDb.ReleaseDate = movie.ReleaseDate;
+                MovieInDb.GenreId = movie.GenreId;
+                MovieInDb.NumberInStock = movie.NumberInStock;
+            }
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Movies");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
+
+            if (movie == null)
+                return HttpNotFound();
+
+            var viewModel = new MovieFormViewModel
+            {
+                Title = "Edit Customer",
+                Movie = movie,
+                Genres = _context.Genres.ToList()
+            };
+
+            return View("MovieForm", viewModel);
+        }
+
     }
 }
