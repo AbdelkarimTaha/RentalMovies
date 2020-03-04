@@ -16,10 +16,10 @@ namespace MoviesWebsite.Controllers
         {
             _context = new ApplicationDbContext();
         }
-        //protected override void Dispose(bool disposing)
-        //{
-        //    _context.Dispose();
-        //}
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
 
         public ActionResult CustomerForm()
         {
@@ -32,9 +32,19 @@ namespace MoviesWebsite.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
-            if (customer.Id == 0) 
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new CustomerFormViewModel(customer)
+                {
+                    MembershipTypes = _context.MembershipTypes.ToList()
+                };
+                return View("CustomerForm", viewModel);
+            }
+
+            if (customer.Id == 0)
                 _context.Customers.Add(customer);
 
             else
@@ -71,9 +81,8 @@ namespace MoviesWebsite.Controllers
             if (customer == null)
                 return HttpNotFound();
 
-            var viewModel = new CustomerFormViewModel
+            var viewModel = new CustomerFormViewModel(customer)
             {
-                Customer = customer,
                 MembershipTypes = _context.MembershipTypes.ToList()
             };
 
