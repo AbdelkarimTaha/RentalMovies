@@ -223,3 +223,13 @@ C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\obj\De
 C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\obj\Debug\MoviesWebsite.Migrations.EditMovieClass.resources
 C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\obj\Debug\MoviesWebsite.Migrations.UpdateMovieClass.resources
 C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\obj\Debug\MoviesWebsite.Migrations.UpdateMovieClass1.resources
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\System.Net.Http.Formatting.dll
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\System.Web.Http.dll
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\System.Web.Http.WebHost.dll
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\System.Net.Http.Formatting.xml
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\System.Web.Http.xml
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\System.Web.Http.WebHost.xml
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\IdentityManager.dll
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\IdentityManager.pdb
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\AutoMapper.dll
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\AutoMapper.xml
