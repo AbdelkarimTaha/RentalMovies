@@ -3,6 +3,7 @@ using MoviesWebsite.Dtos;
 using MoviesWebsite.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -21,7 +22,10 @@ namespace MoviesWebsite.Controllers.Api
 
         public IEnumerable<CustomerDto> GetCustomers()
         {
-            return _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);
+            return _context.Customers
+                .Include(c => c.MembershipType)
+                .ToList()
+                .Select(Mapper.Map<Customer, CustomerDto>);
         }
 
         public IHttpActionResult GetCustomer(int id)
@@ -31,7 +35,7 @@ namespace MoviesWebsite.Controllers.Api
             if (customer == null)
                 return NotFound();
 
-            return Ok(Mapper.Map<Customer,CustomerDto>(customer));
+            return Ok(Mapper.Map<Customer, CustomerDto>(customer));
         }
 
         [HttpPost]
@@ -49,7 +53,7 @@ namespace MoviesWebsite.Controllers.Api
         }
 
         [HttpPut]
-        public void UpdateCustomer(int id,CustomerDto customerDto)
+        public void UpdateCustomer(int id, CustomerDto customerDto)
         {
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
@@ -64,16 +68,18 @@ namespace MoviesWebsite.Controllers.Api
         }
 
         [HttpDelete]
-        public void DeleteCustomer(int id)
+       // [Route("api/Customers/{id}")]
+        public IHttpActionResult DeleteCustomer(int id)
         {
-            var customerInDb = _context.Customers.SingleOrDefault(m => m.Id == id);
+            var customerInDb = _context.Customers.SingleOrDefault(c => c.Id == id);
 
             if (customerInDb == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                return NotFound();
 
             _context.Customers.Remove(customerInDb);
             _context.SaveChanges();
-        }
 
+            return Ok();
+        }
     }
 }

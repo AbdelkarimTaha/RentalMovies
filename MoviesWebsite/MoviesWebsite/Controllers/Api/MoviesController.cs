@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MoviesWebsite.Dtos;
 using MoviesWebsite.Models;
+using System.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,10 @@ namespace MoviesWebsite.Controllers.Api
         // Api/Movies
         public IHttpActionResult GetMovies()
         {
-            var movies = _context.Movies.ToList().Select(Mapper.Map <Movie, MovieDto>);
+            var movies = _context.Movies
+                .Include(m => m.Genre)
+                .ToList()
+                .Select(Mapper.Map <Movie, MovieDto>);
             return Ok(movies);
         }
         
@@ -49,7 +53,6 @@ namespace MoviesWebsite.Controllers.Api
 
             movieDto.Id = movie.Id;
 
-
             return Created(new Uri(Request.RequestUri + "/" + movie.Id), movieDto);
         }
 
@@ -69,7 +72,7 @@ namespace MoviesWebsite.Controllers.Api
         }
 
         [HttpDelete]
-        public void DeleteMovie(int id)
+        public void Delete(int id)
         {
             var movieInDb = _context.Movies.SingleOrDefault(m => m.Id == id);
 
@@ -79,6 +82,5 @@ namespace MoviesWebsite.Controllers.Api
             _context.Movies.Remove(movieInDb);
             _context.SaveChanges();
         }
-
     }
 }

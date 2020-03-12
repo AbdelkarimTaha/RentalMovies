@@ -12,10 +12,15 @@ namespace MoviesWebsite.App_Start
     {
         public MappingProfile()
         {
-            Mapper.CreateMap<Customer, CustomerDto>();
-            Mapper.CreateMap<CustomerDto, Customer>();
+           // Mapper.CreateMap<Customer, CustomerDto>();
+           // Mapper.CreateMap<CustomerDto, Customer>();
+           // Mapper.CreateMap<Movie, MovieDto>().ReverseMap();
 
-            Mapper.CreateMap<Movie, MovieDto>().ReverseMap();
+
+            Mapper.CreateMap<Customer, CustomerDto>().ReverseMap().ForMember(c => c.Id, opt => opt.Ignore());
+            Mapper.CreateMap<Movie, MovieDto>().ReverseMap().ForMember(m => m.Id, opt => opt.Ignore());
+            Mapper.CreateMap<MembershipType, MembershipTypeDto>().ReverseMap().ForMember(c => c.Id, opt => opt.Ignore());
+            Mapper.CreateMap<Genre, GenreDto>().ReverseMap().ForMember(c => c.Id, opt => opt.Ignore());
         }
     }
 }
