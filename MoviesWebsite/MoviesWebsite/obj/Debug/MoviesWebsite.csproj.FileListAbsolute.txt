@@ -233,3 +233,4 @@ C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\Id
 C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\IdentityManager.pdb
 C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\AutoMapper.dll
 C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\bin\AutoMapper.xml
+C:\Users\20115\Desktop\GigHub-master\Testing1\MoviesWebsite\MoviesWebsite\obj\Debug\MoviesWebsite.Migrations.SeedUsers.resources

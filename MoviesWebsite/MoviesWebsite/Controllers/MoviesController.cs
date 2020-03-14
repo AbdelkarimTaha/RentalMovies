@@ -25,7 +25,10 @@ namespace MoviesWebsite.Controllers
 
         public ActionResult Index()
         {
-            return View();
+
+            if (User.IsInRole("CanManageMovie"))
+                return View("List");
+            return View("ReadOnlyList");
         }
 
         public ActionResult Details(int id)
