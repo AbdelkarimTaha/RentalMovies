@@ -25,8 +25,7 @@ namespace MoviesWebsite.Controllers
 
         public ActionResult Index()
         {
-
-            if (User.IsInRole("CanManageMovie"))
+            if (User.IsInRole(RoleName.CanManageMovies))
                 return View("List");
             return View("ReadOnlyList");
         }
@@ -41,6 +40,7 @@ namespace MoviesWebsite.Controllers
             return View(movie);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult MovieForm()
         {
             var genres = _context.Genres.ToList();

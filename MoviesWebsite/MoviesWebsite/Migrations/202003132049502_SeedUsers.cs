@@ -8,12 +8,12 @@ namespace MoviesWebsite.Migrations
         public override void Up()
         {
             Sql(@"
-INSERT INTO [dbo].[AspNetUsers] ([Id], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName]) VALUES (N'330911ef-1abe-4951-bc34-aa360783501b', N'admin@vidly.com', 0, N'AB+Jy3/Trb67CEUpkOrVeZQnnZKqlhd25gqRVheiP06z7WnVvlylAPTtGb0kRc7Z/A==', N'82e64df4-c474-400f-925e-0639aa24e7f3', NULL, 0, 0, NULL, 1, 0, N'admin@vidly.com')
-INSERT INTO [dbo].[AspNetUsers] ([Id], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName]) VALUES (N'fee01fc4-0a90-491e-a4c4-089c1a045a8e', N'guest@vidly.com', 0, N'AETlgxNdGC39l1cbaMcmCRHSVjRIuEEcFxnxj9sWeFIQJy0kxWaROWU9VT6fZfRYwA==', N'bbe2ed0c-f3ba-4205-a59a-662d45067f61', NULL, 0, 0, NULL, 1, 0, N'guest@vidly.com')
+INSERT INTO [dbo].[AspNetUsers] ([Id], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName]) VALUES (N'37edf696-dafa-41ef-a663-b8b8211b018e', N'admin@vidly.com', 0, N'AH2ylOq6bYOGZXvSXsSM7Gmrir6b+RJW5tojhcUc3TgFtX73QwC35JUjaspO8tuqsA==', N'6b16ea0c-3315-47fb-8862-0a7c5ac0587e', NULL, 0, 0, NULL, 1, 0, N'admin@vidly.com')
+INSERT INTO [dbo].[AspNetUsers] ([Id], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName]) VALUES (N'effa4366-e7ff-4317-9509-415257aac255', N'guset@vidly.com', 0, N'ANPmMiSOYNuzX8gpa4m2NyWVTge/bC5kyflW0GMMrE7K7WYKmoAmhmmXv8Pnsr+zFA==', N'ace6d7b7-5b0a-4964-8f3b-c417a6596ea5', NULL, 0, 0, NULL, 1, 0, N'guest@vidly.com')
 
-INSERT INTO [dbo].[AspNetRoles] ([Id], [Name]) VALUES (N'028a82bf-643a-48d4-b39d-3336ab8e7f21', N'CanManageMovie')
+INSERT INTO [dbo].[AspNetRoles] ([Id], [Name]) VALUES (N'b401d1d8-d5a2-4056-bd45-8de746eb14c0', N'CanManageMovie')
 
-INSERT INTO [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'330911ef-1abe-4951-bc34-aa360783501b', N'028a82bf-643a-48d4-b39d-3336ab8e7f21')
+INSERT INTO [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'37edf696-dafa-41ef-a663-b8b8211b018e', N'b401d1d8-d5a2-4056-bd45-8de746eb14c0')
 
 ");
         }
