@@ -65,8 +65,14 @@ namespace MoviesWebsite.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Mobile Phone")]
+         [StringLength(11, ErrorMessage = "The Phone must be 11 characters long.")]
+        public string Phone { get; set; }
+
+        [Required]
         [Display(Name = "Driving License")]
         public string DrivingLicense { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
